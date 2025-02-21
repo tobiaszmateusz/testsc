@@ -4,7 +4,6 @@ javascript: (function() {
     // --- Input Validation and Error Handling ---
     if (!coinsElement) {
         console.error("Element with ID 'coin_mint_fill_max' not found.");
-        alert("Error: Could not find the coins element.  Please check the page structure."); // User-friendly message
         return; // Stop execution
     }
 
@@ -15,7 +14,6 @@ javascript: (function() {
     var coinsNum = parseInt(coins, 10);
     if (isNaN(coinsNum)) {
         console.error("Invalid coins value:", coins);
-        alert("Error: The coins value is not a valid number.");
         return;
     }
 
@@ -24,7 +22,6 @@ javascript: (function() {
     // --- Input Validation ---
     if (!countInput) {
         console.error("Input element with name 'count' not found.");
-        alert("Error: Could not find the input field for the count.");
         return;
     }
     countInput.value = coinsNum; // Set the value (using the numeric version)
@@ -44,7 +41,6 @@ javascript: (function() {
 
     if (!submitButton) {
         console.error("Submit button not found.");
-        alert("Error: Could not find the submit button.");
         return;
     }
 
